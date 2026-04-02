@@ -77,13 +77,14 @@ class _ResultScreenQuizState extends State<ResultScreenQuiz> {
         mainMessage = 'Keep practicing!';
         subMessage = 'Good Start!';
         resultColor = Color.fromARGB(255, 248, 145, 145);
+        break;
 
       case 0:
         statusText = '☹️ Not passed!';
         mainMessage = 'Keep practicing!';
         subMessage = 'Keep Trying!';
         resultColor = Color.fromARGB(255, 248, 145, 145);
-
+        break;
       default:
         debugPrint('Invalid');
     }
@@ -113,16 +114,14 @@ class _ResultScreenQuizState extends State<ResultScreenQuiz> {
       ),
       body: Stack(
         children: [
-          Expanded(
-            child: Container(
-              height: double.infinity,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  colors: [Color(0xFF5B3A3E), Color(0xFF1E2235)],
-                ),
+          Container(
+            height: double.infinity,
+            width: double.infinity,
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [Color(0xFF5B3A3E), Color(0xFF1E2235)],
               ),
             ),
           ),

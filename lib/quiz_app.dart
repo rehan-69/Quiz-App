@@ -3,10 +3,6 @@ import 'package:flutter/material.dart';
 import 'result_screen.dart';
 import 'dart:async';
 
-void main() {
-  runApp(MaterialApp(debugShowCheckedModeBanner: false, home: QuizApp()));
-}
-
 class QuizApp extends StatefulWidget {
   const QuizApp({super.key});
 
@@ -33,7 +29,7 @@ class _QuizAppState extends State<QuizApp> {
     'Dart supports any class to be used as mixin',
     'Sealed classes are by default abstract',
   ];
-  List<bool> questionOfAnswer = [false, false, true, false, true];
+  List<bool> questionOfAnswer = [true, false, false, false, true];
   List<Widget> scoreTracker = [];
   bool userOfAnswer = false;
   int currentQuestionIndex = 0;
@@ -196,13 +192,11 @@ class _QuizAppState extends State<QuizApp> {
                               },
                         ),
                       );
+                    } else {
+                      setState(() {
+                        currentQuestionIndex++;
+                      });
                     }
-
-                    if (currentQuestionIndex < question.length - 1) {
-                      currentQuestionIndex++;
-                    }
-
-                    setState(() {});
                   },
                   label: Text(
                     'True',
@@ -283,13 +277,11 @@ class _QuizAppState extends State<QuizApp> {
                               },
                         ),
                       );
+                    } else {
+                      setState(() {
+                        currentQuestionIndex++;
+                      });
                     }
-
-                    if (currentQuestionIndex < question.length - 1) {
-                      currentQuestionIndex++;
-                    }
-
-                    setState(() {});
                   },
                   label: Text(
                     'False',
