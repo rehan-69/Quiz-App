@@ -32,15 +32,7 @@ class _ResultScreenQuizState extends State<ResultScreenQuiz> {
   Color? containerColorRed;
   int anaIndex = 0;
 
-  // void _questionAnalysis() {
-  //   if () {
-  //     containerColorGreen = Colors.green;
-  //     anaIndex++;
-  //   } else {
-  //     containerColorRed = Colors.red;
-  //     anaIndex++;
-  //   }
-  // }
+ 
 
   void _statusCheck() {
     switch (percentage) {
